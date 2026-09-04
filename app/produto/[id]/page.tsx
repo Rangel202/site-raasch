@@ -5,6 +5,7 @@ import AddToCart from "../../components/AddToCart";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import ProductGallery from "../../components/ProductGallery";
 import ProductGrid from "../../components/ProductGrid";
+import StickyBuyBar from "../../components/StickyBuyBar";
 import Reveal from "../../components/Reveal";
 import { PRODUCTS, VERTICALS, findProduct, productsOf } from "../../data/catalog";
 import { SITE, productWhatsapp } from "../../data/site";
@@ -103,7 +104,7 @@ export default async function Page({
                 </p>
               )}
 
-              <div className="mt-10 flex flex-col gap-3">
+              <div id="acoes-produto" className="mt-10 flex flex-col gap-3">
                 <a
                   href={productWhatsapp(product.name, product.ref)}
                   target="_blank"
@@ -145,8 +146,16 @@ export default async function Page({
         </div>
       </section>
 
+      <StickyBuyBar
+        id={product.id}
+        name={product.name}
+        reference={product.ref}
+        image={product.images[0]}
+        whatsappHref={productWhatsapp(product.name, product.ref)}
+      />
+
       {related.length > 0 && (
-        <section className="border-t border-sand bg-cream/40 py-14 sm:py-18 lg:py-24">
+        <section className="border-t border-sand bg-cream/40 py-14 pb-28 sm:py-18 lg:py-24 lg:pb-24">
           <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
             <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>

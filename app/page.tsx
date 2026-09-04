@@ -1,23 +1,29 @@
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
-import Verticals from "./components/Verticals";
-import Highlights from "./components/Highlights";
+import JoiasSpotlight from "./components/JoiasSpotlight";
+import HowToBuy from "./components/HowToBuy";
+import OtherLines from "./components/OtherLines";
 import Story from "./components/Story";
-import Magazine from "./components/Magazine";
 import Instagram from "./components/Instagram";
+import Magazine from "./components/Magazine";
 import Contact from "./components/Contact";
 import StoreMap from "./components/StoreMap";
 
+/**
+ * Jewellery leads: it is the flagship line and the one a visitor arrives ready
+ * to buy. Lighting and decoration follow once that story is told.
+ */
 export default function Home() {
   return (
     <>
       <Hero />
       <Marquee />
-      <Verticals />
-      <Highlights />
+      <JoiasSpotlight />
+      <HowToBuy />
+      <OtherLines />
       <Story />
-      <Magazine />
       <Instagram />
+      <Magazine />
       <Contact />
       <StoreMap />
     </>

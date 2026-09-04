@@ -109,8 +109,9 @@ export default function Hero() {
             className="mt-5 max-w-lg text-[14px] leading-relaxed font-light text-ivory/80 sm:mt-7 sm:text-[15px]"
             style={{ animation: "fadeUp 1.1s var(--ease-luxe) 0.65s forwards", opacity: 0 }}
           >
-            Jóias, iluminação e decoração em um só endereço. Mais de 14.000
-            itens e atendimento personalizado, do primeiro contato ao pós-venda.
+            Alianças, anéis, brincos e colares em ouro, diamantes e pedras
+            naturais — escolhidos peça a peça desde 1989. Orçamento na hora,
+            pelo WhatsApp.
           </p>
 
           <div
@@ -125,10 +126,10 @@ export default function Hero() {
               <span>Ver as jóias</span>
             </Link>
             <Link
-              href="#linhas"
+              href="#joias"
               className="inline-flex items-center justify-center gap-3 border border-ivory/30 px-9 py-4 text-[12px] tracking-[0.22em] text-ivory uppercase transition-colors duration-500 hover:border-gold-pale hover:text-gold-pale sm:border-0 sm:px-2"
             >
-              Nossas três linhas
+              Ver a coleção
               <span aria-hidden>→</span>
             </Link>
           </div>

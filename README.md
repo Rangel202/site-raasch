@@ -80,6 +80,25 @@ A loja fecha as vendas no WhatsApp, e o site respeita isso:
   monta uma mensagem única de orçamento com todos os itens.
 - Formulário de contato e botão flutuante apontam para o mesmo número.
 
+## Foco em jóias
+
+A home é ordenada como uma joalheria, não como um catálogo de três linhas
+iguais. Jóias é a linha principal e a que o visitante chega pronto para comprar.
+
+1. **Hero** — vídeo, com texto e CTA de jóias.
+2. **Jóias** (`JoiasSpotlight.tsx`) — trilho horizontal de categorias
+   (Alianças primeiro, a maior e a de maior intenção de compra) mais peças em
+   destaque. O trilho é rolagem nativa no celular e vira grade em `lg`.
+3. **Como comprar** (`HowToBuy.tsx`) — os três passos do WhatsApp. Sem preço
+   na tela, esta seção responde à dúvida que trava a compra.
+4. **Iluminação e decoração** (`OtherLines.tsx`) — as outras linhas, presentes
+   e deliberadamente mais discretas.
+5. Empresa, Instagram, Revista, Contato e mapa.
+
+Na ficha do produto, uma **barra fixa de compra** (`StickyBuyBar.tsx`) aparece
+no celular quando os botões principais saem da tela. O botão flutuante do
+WhatsApp se retira enquanto ela está visível, via `body[data-buybar]`.
+
 ## Instagram e mapa
 
 - Seção dedicada ao **@raasch_joias** (`app/components/Instagram.tsx`): perfil em

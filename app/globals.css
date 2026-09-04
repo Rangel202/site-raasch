@@ -187,6 +187,14 @@
     animation: shimmer 6s linear infinite;
   }
 
+  /* The sticky buy bar carries its own WhatsApp CTA; the floating one steps
+     aside instead of stacking on top of it. */
+  body[data-buybar="on"] .whatsapp-fab {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    pointer-events: none;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
