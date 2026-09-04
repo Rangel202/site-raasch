@@ -5,7 +5,7 @@ import { FACTS } from "../data/site";
 
 export default function Story() {
   return (
-    <section className="bg-ivory py-24 lg:py-32">
+    <section className="bg-ivory py-16 sm:py-20 lg:py-32">
       <div className="mx-auto grid max-w-[1500px] items-center gap-14 px-5 lg:grid-cols-2 lg:gap-24 lg:px-10">
         <Reveal className="relative">
           <div className="relative aspect-4/5 overflow-hidden">
@@ -20,13 +20,13 @@ export default function Story() {
           {/* Offset frame line, a quiet editorial detail */}
           <div
             aria-hidden
-            className="absolute -right-4 -bottom-4 h-full w-full border border-clay/60 lg:-right-6 lg:-bottom-6"
+            className="absolute -right-3 -bottom-3 hidden h-full w-full border border-clay/60 sm:block lg:-right-6 lg:-bottom-6"
           />
         </Reveal>
 
         <Reveal delay={140}>
           <p className="eyebrow text-gold">A empresa</p>
-          <h2 className="mt-5 font-display text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.06] font-light">
+          <h2 className="mt-5 font-display display-1 font-light">
             Trinta e seis anos
             <br />
             <em className="italic text-gold">de confiança</em>

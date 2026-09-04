@@ -48,14 +48,14 @@ export default function Footer() {
               <h3 className="text-[11px] tracking-[0.28em] text-gold-pale uppercase">
                 {vertical.label}
               </h3>
-              <ul className="mt-6 flex flex-col gap-3">
+              <ul className="mt-5 flex flex-col gap-0.5 sm:mt-6 sm:gap-1">
                 {categoriesOf(vertical.slug)
                   .slice(0, 7)
                   .map((category) => (
                     <li key={category.slug}>
                       <Link
                         href={`/${vertical.slug}/${category.slug}`}
-                        className="link-underline text-[13px] font-light text-ivory/65 transition-colors duration-500 hover:text-ivory"
+                        className="link-underline inline-block py-1.5 text-[13px] font-light text-ivory/65 transition-colors duration-500 hover:text-ivory"
                       >
                         {category.label.includes("·")
                           ? category.label.split("·").pop()!.trim()
@@ -66,7 +66,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href={`/${vertical.slug}`}
-                    className="link-underline text-[13px] font-light text-gold-pale/90 transition-colors duration-500 hover:text-gold-pale"
+                    className="link-underline inline-block py-1.5 text-[13px] font-light text-gold-pale/90 transition-colors duration-500 hover:text-gold-pale"
                   >
                     Ver tudo →
                   </Link>
@@ -79,12 +79,12 @@ export default function Footer() {
             <h3 className="text-[11px] tracking-[0.28em] text-gold-pale uppercase">
               Institucional
             </h3>
-            <ul className="mt-6 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-0.5 sm:mt-6 sm:gap-1">
               {INSTITUTIONAL.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="link-underline text-[13px] font-light text-ivory/65 transition-colors duration-500 hover:text-ivory"
+                    className="link-underline inline-block py-1.5 text-[13px] font-light text-ivory/65 transition-colors duration-500 hover:text-ivory"
                   >
                     {link.label}
                   </Link>

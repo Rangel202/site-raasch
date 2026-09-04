@@ -77,7 +77,7 @@ export default function CategoryPage({
                 <Link
                   key={sibling.slug}
                   href={`/${vertical}/${sibling.slug}`}
-                  className={`shrink-0 border px-4 py-2 text-[11px] tracking-[0.16em] whitespace-nowrap uppercase transition-colors duration-400 ${
+                  className={`shrink-0 border px-4 py-3 text-[11px] tracking-[0.16em] whitespace-nowrap uppercase transition-colors duration-400 ${
                     active
                       ? "border-gold bg-gold text-ivory"
                       : "border-sand text-ink-soft hover:border-gold hover:text-gold"

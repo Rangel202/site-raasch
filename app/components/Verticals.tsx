@@ -5,11 +5,11 @@ import { VERTICAL_LIST, countOf } from "../data/catalog";
 
 export default function Verticals() {
   return (
-    <section id="linhas" className="bg-ivory py-24 lg:py-32">
+    <section id="linhas" className="bg-ivory py-16 sm:py-20 lg:py-32">
       <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
         <Reveal className="flex flex-col items-center text-center">
           <p className="eyebrow text-gold">Três linhas, uma casa</p>
-          <h2 className="mt-5 max-w-2xl font-display text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[1.06] font-light">
+          <h2 className="mt-5 max-w-2xl font-display display-1 font-light">
             Tudo o que a sua casa e o seu
             <em className="italic text-gold"> estilo</em> pedem
           </h2>

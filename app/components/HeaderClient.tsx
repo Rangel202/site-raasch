@@ -111,7 +111,10 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
           }`}
         >
           <p className="bg-ink px-4 py-2.5 text-center text-[9px] tracking-[0.2em] text-gold-pale uppercase sm:text-[11px] sm:tracking-[0.28em]">
-            Desde 1989 em Porto Alegre · Orçamento pelo WhatsApp
+            <span className="sm:hidden">Desde 1989 · Porto Alegre</span>
+            <span className="hidden sm:inline">
+              Desde 1989 em Porto Alegre · Orçamento pelo WhatsApp
+            </span>
           </p>
         </div>
 
@@ -153,7 +156,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
               type="button"
               onClick={() => setMenuOpen(true)}
               aria-label="Abrir menu"
-              className={`flex flex-col gap-[5px] xl:hidden ${tone}`}
+              className={`-m-1.5 flex h-11 w-11 items-center justify-center flex-col gap-[5px] xl:hidden ${tone}`}
             >
               <span className="block h-px w-6 bg-current" />
               <span className="block h-px w-6 bg-current" />
@@ -164,7 +167,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
             <Link
               href="/"
               aria-label="Raasch — página inicial"
-              className="flex flex-1 justify-center"
+              className="-my-2 flex flex-1 justify-center py-2"
             >
               <Image
                 src="/logo-wordmark.png"
@@ -191,7 +194,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
                 onClick={() => setSearchOpen((v) => !v)}
                 aria-label="Buscar no catálogo"
                 aria-expanded={searchOpen}
-                className={`transition-colors duration-500 hover:text-gold ${tone}`}
+                className={`-m-1.5 flex h-11 w-11 items-center justify-center transition-colors duration-500 hover:text-gold ${tone}`}
               >
                 <SearchIcon />
               </button>
@@ -200,7 +203,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Instagram ${SITE.instagram[0].handle}`}
-                className={`transition-colors duration-500 hover:text-gold ${tone}`}
+                className={`-m-1.5 flex h-11 w-11 items-center justify-center transition-colors duration-500 hover:text-gold ${tone}`}
               >
                 <InstagramIcon />
               </a>
@@ -209,7 +212,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Falar no WhatsApp"
-                className={`hidden transition-colors duration-500 hover:text-gold sm:block ${tone}`}
+                className={`-m-1.5 flex h-11 w-11 items-center justify-center hidden transition-colors duration-500 hover:text-gold sm:flex ${tone}`}
               >
                 <WhatsAppIcon />
               </a>
@@ -217,7 +220,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
                 type="button"
                 onClick={() => setCartOpen(true)}
                 aria-label={`Meu cesto — ${count} ${count === 1 ? "item" : "itens"}`}
-                className={`relative transition-colors duration-500 hover:text-gold ${tone}`}
+                className={`relative -m-1.5 flex h-11 w-11 items-center justify-center transition-colors duration-500 hover:text-gold ${tone}`}
               >
                 <BagIcon />
                 {count > 0 && (
@@ -253,7 +256,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
               />
               <button
                 type="submit"
-                className={`text-[11px] tracking-[0.22em] uppercase transition-colors hover:text-gold ${tone}`}
+                className={`-my-2 py-3 text-[11px] tracking-[0.22em] uppercase transition-colors hover:text-gold ${tone}`}
               >
                 Buscar
               </button>
@@ -368,7 +371,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
                 <div className="mt-4 flex flex-col gap-4 pb-2">
                   <Link
                     href={`/${vertical.slug}`}
-                    className="text-[12px] tracking-[0.18em] text-gold uppercase"
+                    className="block py-1.5 text-[12px] tracking-[0.18em] text-gold uppercase"
                   >
                     Ver tudo em {vertical.label}
                   </Link>
@@ -384,7 +387,7 @@ export default function HeaderClient({ nav }: { nav: NavVertical[] }) {
                           <li key={item.href}>
                             <Link
                               href={item.href}
-                              className="text-[14px] font-light text-ink-soft"
+                              className="block py-1.5 text-[14px] font-light text-ink-soft"
                             >
                               {item.label}
                               <span className="ml-2 text-[10px] text-muted/70">

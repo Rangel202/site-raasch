@@ -5,7 +5,7 @@ export type Crumb = { label: string; href?: string };
 export default function Breadcrumbs({ trail }: { trail: Crumb[] }) {
   return (
     <nav aria-label="Você está aqui">
-      <ol className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] tracking-[0.16em] text-muted uppercase">
+      <ol className="-my-1.5 flex flex-wrap items-center gap-x-3 gap-y-0 py-1.5 text-[11px] tracking-[0.16em] text-muted uppercase [&_a]:inline-block [&_a]:py-1.5">
         <li>
           <Link href="/" className="transition-colors hover:text-gold">
             Home

@@ -27,7 +27,7 @@ export default function Page() {
         image="/images/editorial-raasch.jpg"
       />
 
-      <section className="bg-ivory py-20 lg:py-28">
+      <section className="bg-ivory py-14 sm:py-18 lg:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-14 px-5 lg:grid-cols-[1fr_1.15fr] lg:gap-20 lg:px-10">
           <Reveal className="relative">
             <div className="relative aspect-4/5 overflow-hidden">
@@ -47,7 +47,7 @@ export default function Page() {
 
           <Reveal delay={140}>
             <p className="eyebrow text-gold">Quem somos</p>
-            <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.2rem)] leading-[1.08] font-light">
+            <h2 className="mt-5 font-display display-2 font-light">
               A sede está à altura
               <br />
               <em className="italic text-gold">dos nossos produtos</em>
@@ -90,7 +90,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="border-y border-sand bg-cream/50 py-20 lg:py-24">
+      <section className="border-y border-sand bg-cream/50 py-14 sm:py-18 lg:py-24">
         <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
           <Reveal className="grid grid-cols-2 gap-10 lg:grid-cols-4">
             {FACTS.map((fact) => (
@@ -107,11 +107,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-ivory py-20 lg:py-28">
+      <section className="bg-ivory py-14 sm:py-18 lg:py-28">
         <div className="mx-auto max-w-[1100px] px-5 lg:px-10">
           <Reveal className="text-center">
             <p className="eyebrow text-gold">Linha do tempo</p>
-            <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.2rem)] leading-tight font-light">
+            <h2 className="mt-5 font-display display-2 font-light">
               Como chegamos até aqui
             </h2>
             <div className="rule mx-auto mt-8 w-24" />

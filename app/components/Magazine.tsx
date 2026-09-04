@@ -4,7 +4,7 @@ import { MAGAZINES } from "../data/site";
 
 export default function Magazine() {
   return (
-    <section className="grain relative overflow-hidden bg-ink py-24 text-ivory lg:py-32">
+    <section className="grain relative overflow-hidden bg-ink py-16 text-ivory sm:py-20 lg:py-32">
       <Image
         src="/images/editorial-lustre.jpg"
         alt=""
@@ -17,7 +17,7 @@ export default function Magazine() {
       <div className="relative z-10 mx-auto grid max-w-[1500px] items-center gap-14 px-5 lg:grid-cols-2 lg:px-10">
         <Reveal>
           <p className="eyebrow text-gold-pale">Conheça a nossa</p>
-          <h2 className="mt-5 font-display text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[1.05] font-light">
+          <h2 className="mt-5 font-display display-1 font-light">
             Revista
             <br />
             <em className="italic text-gold-pale">Digital</em>
@@ -35,7 +35,7 @@ export default function Magazine() {
               href={magazine.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between gap-6 border border-ivory/15 px-7 py-7 transition-colors duration-500 hover:border-gold-pale/60 hover:bg-ivory/5"
+              className="group flex flex-col gap-5 border border-ivory/15 px-6 py-6 transition-colors duration-500 hover:border-gold-pale/60 hover:bg-ivory/5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-7 sm:py-7"
             >
               <div>
                 <p className="text-[10px] tracking-[0.28em] text-gold-pale uppercase">

@@ -68,7 +68,7 @@ export default async function Page({
 
             <div className="lg:pt-4">
               <p className="eyebrow text-gold">{label}</p>
-              <h1 className="mt-4 font-display text-[clamp(2rem,4vw,3.2rem)] leading-[1.06] font-light">
+              <h1 className="mt-4 font-display display-2 font-light">
                 {product.name}
               </h1>
 
@@ -146,18 +146,18 @@ export default async function Page({
       </section>
 
       {related.length > 0 && (
-        <section className="border-t border-sand bg-cream/40 py-20 lg:py-24">
+        <section className="border-t border-sand bg-cream/40 py-14 sm:py-18 lg:py-24">
           <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
             <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="eyebrow text-gold">Você também pode gostar</p>
-                <h2 className="mt-4 font-display text-[clamp(1.8rem,3.4vw,2.6rem)] leading-tight font-light">
+                <h2 className="mt-4 font-display display-3 font-light">
                   Mais em {label.toLowerCase()}
                 </h2>
               </div>
               <Link
                 href={`/${product.vertical}/${product.category}`}
-                className="link-underline self-start text-[12px] tracking-[0.22em] text-ink-soft uppercase transition-colors hover:text-gold sm:self-auto"
+                className="self-start border border-sand px-5 py-3 text-[11px] tracking-[0.2em] text-ink-soft uppercase transition-colors hover:border-gold hover:text-gold md:border-0 md:px-0 md:py-0 md:text-[12px] md:tracking-[0.22em] md:link-underline sm:self-auto"
               >
                 Ver a categoria
               </Link>

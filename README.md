@@ -93,13 +93,25 @@ A loja fecha as vendas no WhatsApp, e o site respeita isso:
 
 ## Mobile
 
-- Os cards das três linhas viram quadrados abaixo de `lg`, para caberem na tela
-  sem rolagem interminável.
+O celular é tratado como o caso principal, não como uma redução do desktop.
+
+- **Hero em vídeo com autoplay real.** React renderiza `muted` como propriedade,
+  mas as políticas de autoplay do mobile leem o *atributo* — sem ele o telefone
+  espera um toque. O atributo é escrito no `useEffect`, e há retry em
+  `visibilitychange`/`touchstart` para Low Power Mode. Se ainda assim o
+  autoplay for negado, o poster assume a animação Ken Burns: o hero nunca fica
+  parado.
+- **Escala tipográfica com piso de celular** (`.display-1/2/3` em
+  `globals.css`). Um `clamp(2.2rem, 4.5vw, …)` trava no piso em 375px, o que
+  deixava títulos grandes demais — "disposição" chegava a ser cortada.
+- **Alvos de toque de 44px** no header, chips de categoria e breadcrumbs. O
+  botão de menu tinha 13px de altura.
 - O botão "adicionar ao cesto" da grade só aparece no hover — como toque não
-  dispara hover, abaixo de `lg` ele é substituído por um botão **+ Cesto**
-  sob o nome da peça.
-- Os cards da grade têm altura igual, para os botões não desalinharem quando um
-  nome quebra em duas linhas.
+  dispara hover, abaixo de `lg` ele vira um botão **+ Cesto** sob o nome.
+- Cards das três linhas viram quadrados abaixo de `lg`; cards da grade têm
+  altura igual para os botões não desalinharem.
+- Ritmo vertical menor no celular, aviso do topo encurtado, e os links de seção
+  ganham borda até `md` para parecerem tocáveis.
 
 ## Pendências
 

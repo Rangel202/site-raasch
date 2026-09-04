@@ -101,7 +101,7 @@ export default function ProductCard({ product, eager = false }: Props) {
         <button
           type="button"
           onClick={addToCart}
-          className="mt-auto flex w-full items-center justify-center gap-2 border border-sand py-2.5 text-[10px] tracking-[0.2em] text-ink-soft uppercase transition-colors active:border-gold active:text-gold lg:hidden"
+          className="mt-auto flex w-full items-center justify-center gap-2 border border-sand py-3 text-[10px] tracking-[0.2em] text-ink-soft uppercase transition-colors active:border-gold active:text-gold lg:hidden"
         >
           <span aria-hidden className="text-[13px] leading-none">
             +

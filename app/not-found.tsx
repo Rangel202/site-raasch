@@ -3,12 +3,12 @@ import { VERTICAL_LIST } from "./data/catalog";
 
 export default function NotFound() {
   return (
-    <section className="flex min-h-[70vh] items-center bg-ivory pt-[128px] pb-24">
+    <section className="flex min-h-[70vh] items-center bg-ivory pt-[124px] pb-16 sm:pb-24">
       <div className="mx-auto max-w-2xl px-5 text-center lg:px-10">
         <p className="foil font-display text-[76px] leading-none font-normal">
           404
         </p>
-        <h1 className="mt-6 font-display text-[clamp(2rem,4vw,3rem)] leading-tight font-light">
+        <h1 className="mt-6 font-display display-2 font-light">
           Esta página não existe
         </h1>
         <p className="mx-auto mt-5 max-w-md leading-relaxed font-light text-ink-soft">

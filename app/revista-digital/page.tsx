@@ -25,7 +25,7 @@ export default function Page() {
         image="/images/editorial-lustre.jpg"
       />
 
-      <section className="bg-ivory py-20 lg:py-28">
+      <section className="bg-ivory py-14 sm:py-18 lg:py-28">
         <div className="mx-auto max-w-[1100px] px-5 lg:px-10">
           <div className="grid gap-6 sm:grid-cols-2">
             {MAGAZINES.map((magazine, i) => (

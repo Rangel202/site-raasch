@@ -14,7 +14,7 @@ export default function Instagram() {
   const pieces = highlights("joias", 6, 11);
 
   return (
-    <section className="grain relative overflow-hidden bg-ink py-20 text-ivory lg:py-28">
+    <section className="grain relative overflow-hidden bg-ink py-16 text-ivory sm:py-20 lg:py-28">
       <div className="relative z-10 mx-auto max-w-[1500px] px-5 lg:px-10">
         <Reveal className="flex flex-col items-center text-center">
           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 text-gold-pale">
@@ -27,7 +27,7 @@ export default function Instagram() {
             href={main.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-4 font-display text-[clamp(2.4rem,6vw,4.4rem)] leading-none font-light transition-colors duration-500 hover:text-gold-pale"
+            className="group mt-4 font-display text-[clamp(1.9rem,7vw,4.4rem)] leading-none font-light transition-colors duration-500 hover:text-gold-pale"
           >
             <span className="link-underline">{main.handle}</span>
           </a>
@@ -52,7 +52,7 @@ export default function Instagram() {
         </Reveal>
 
         {/* Real catalogue photography, explicitly labelled as such */}
-        <Reveal delay={140} className="mt-16">
+        <Reveal delay={140} className="mt-12 sm:mt-16">
           <div className="grid grid-cols-3 gap-2.5 lg:grid-cols-6 lg:gap-4">
             {pieces.map((piece) => (
               <Link
@@ -79,7 +79,7 @@ export default function Instagram() {
 
         <Reveal
           delay={220}
-          className="mt-14 border-t border-ivory/12 pt-10 text-center"
+          className="mt-12 border-t border-ivory/12 pt-9 text-center sm:mt-14 sm:pt-10"
         >
           <p className="text-[13px] font-light text-ivory/60">
             Decoração e iluminação têm perfil próprio:

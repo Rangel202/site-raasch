@@ -12,19 +12,19 @@ export default function Highlights() {
   ];
 
   return (
-    <section className="bg-cream/40 py-24 lg:py-32">
+    <section className="bg-cream/40 py-16 sm:py-20 lg:py-32">
       <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="eyebrow text-gold">Seleção da casa</p>
-            <h2 className="mt-5 max-w-xl font-display text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.06] font-light">
+            <h2 className="mt-5 max-w-xl font-display display-1 font-light">
               Peças que saem
               <em className="italic text-gold"> do comum</em>
             </h2>
           </div>
           <Link
             href="/busca"
-            className="link-underline self-start text-[12px] tracking-[0.22em] text-ink-soft uppercase transition-colors hover:text-gold md:self-auto"
+            className="self-start border border-sand px-5 py-3 text-[11px] tracking-[0.2em] text-ink-soft uppercase transition-colors hover:border-gold hover:text-gold md:border-0 md:px-0 md:py-0 md:text-[12px] md:tracking-[0.22em] md:link-underline md:self-auto"
           >
             Buscar no catálogo completo
           </Link>

@@ -32,11 +32,11 @@ export default function Contact() {
     "w-full border border-clay/60 bg-ivory/70 px-5 py-3.5 text-[14px] font-light text-ink transition-colors duration-500 outline-none placeholder:text-muted/70 focus:border-gold";
 
   return (
-    <section id="contato" className="bg-cream py-24 lg:py-32">
+    <section id="contato" className="bg-cream py-16 sm:py-20 lg:py-32">
       <div className="mx-auto grid max-w-[1500px] gap-14 px-5 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <Reveal>
           <p className="eyebrow text-gold">Fale conosco</p>
-          <h2 className="mt-5 font-display text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.06] font-light">
+          <h2 className="mt-5 font-display display-1 font-light">
             Estamos à sua
             <em className="italic text-gold"> disposição</em>
           </h2>

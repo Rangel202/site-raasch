@@ -34,7 +34,7 @@ export default function PageHead({ eyebrow, title, intro, trail, image }: Props)
             <Breadcrumbs trail={trail} />
           </div>
           <p className="eyebrow mt-8 text-gold-pale">{eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.4rem,5.4vw,4.4rem)] leading-[1.02] font-light text-ivory">
+          <h1 className="mt-4 max-w-3xl font-display display-1 font-light text-ivory">
             {title}
           </h1>
           {intro && (
@@ -52,7 +52,7 @@ export default function PageHead({ eyebrow, title, intro, trail, image }: Props)
       <Reveal className="mx-auto max-w-[1500px] px-5 lg:px-10">
         <Breadcrumbs trail={trail} />
         <p className="eyebrow mt-8 text-gold">{eyebrow}</p>
-        <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.2rem,5vw,4rem)] leading-[1.04] font-light">
+        <h1 className="mt-4 max-w-3xl font-display display-1 font-light">
           {title}
         </h1>
         {intro && (

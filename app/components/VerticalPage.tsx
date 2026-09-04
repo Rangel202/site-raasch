@@ -26,12 +26,12 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
         image={meta.cover}
       />
 
-      <section className="bg-ivory py-20 lg:py-24">
+      <section className="bg-ivory py-14 sm:py-18 lg:py-24">
         <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
           <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="eyebrow text-gold">Por categoria</p>
-              <h2 className="mt-4 font-display text-[clamp(1.9rem,3.6vw,2.8rem)] leading-tight font-light">
+              <h2 className="mt-4 font-display display-2 font-light">
                 Escolha por onde começar
               </h2>
             </div>
@@ -62,18 +62,18 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
         </div>
       </section>
 
-      <section className="border-t border-sand bg-cream/40 py-20 lg:py-28">
+      <section className="border-t border-sand bg-cream/40 py-14 sm:py-18 lg:py-28">
         <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
           <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow text-gold">Destaques</p>
-              <h2 className="mt-4 font-display text-[clamp(1.9rem,3.6vw,2.8rem)] leading-tight font-light">
+              <h2 className="mt-4 font-display display-2 font-light">
                 Uma amostra de {meta.label.toLowerCase()}
               </h2>
             </div>
             <Link
               href="/busca"
-              className="link-underline self-start text-[12px] tracking-[0.22em] text-ink-soft uppercase transition-colors hover:text-gold md:self-auto"
+              className="self-start border border-sand px-5 py-3 text-[11px] tracking-[0.2em] text-ink-soft uppercase transition-colors hover:border-gold hover:text-gold md:border-0 md:px-0 md:py-0 md:text-[12px] md:tracking-[0.22em] md:link-underline md:self-auto"
             >
               Buscar no catálogo
             </Link>
