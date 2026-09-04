@@ -1,0 +1,422 @@
+[
+ {
+  "vertical": "decoracao",
+  "slug": "cristais/outros",
+  "label": "Cristais · Outros",
+  "count": 8,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16541935282022-06-021.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "cristais/objetos_de_decoracao",
+  "label": "Cristais · Objetos de Decoração",
+  "count": 19,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16541966842022-06-021.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "esculturas",
+  "label": "Esculturas",
+  "count": 85,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16535910512022-05-261.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "espelhos",
+  "label": "Espelhos",
+  "count": 104,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16554990102022-06-171.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/cadeiras",
+  "label": "Móveis Externos · Cadeiras",
+  "count": 199,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15582169782019-05-181.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/espreguicadeiras_e_chaises",
+  "label": "Móveis Externos · Espreguiçadeiras",
+  "count": 170,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15585472052019-05-221.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/mesas_de_jantar",
+  "label": "Móveis Externos · Mesas de Jantar",
+  "count": 148,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16517816542022-05-051.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/mesas_auxiliares",
+  "label": "Móveis Externos · Mesas Auxiliares",
+  "count": 87,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15634616322019-07-181.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/aparadores",
+  "label": "Móveis Externos · Aparadores",
+  "count": 44,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16951460862023-09-191.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/outros",
+  "label": "Móveis Externos · Outros",
+  "count": 67,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/17048900152024-01-101.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/bancos",
+  "label": "Móveis Externos · Bancos",
+  "count": 32,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16192009852021-04-231.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/banquetas",
+  "label": "Móveis Externos · Banquetas",
+  "count": 86,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/17049184982024-01-101.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/poltronas",
+  "label": "Móveis Externos · Poltronas",
+  "count": 326,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15583874772019-05-201.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/sofas",
+  "label": "Móveis Externos · Sofás",
+  "count": 173,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15578545082019-05-141.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/mesas_de_centro",
+  "label": "Móveis Externos · Mesas de Centro",
+  "count": 167,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15603477072019-06-121.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/ombrelones_e_bases",
+  "label": "Móveis Externos · Ombrelones",
+  "count": 8,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16950462762023-09-181.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_externos/puff",
+  "label": "Móveis Externos · Puffs",
+  "count": 70,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16953098392023-09-211.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/aparadores",
+  "label": "Móveis Internos · Aparadores",
+  "count": 230,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16678507882022-11-071.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/cadeiras",
+  "label": "Móveis Internos · Cadeiras",
+  "count": 378,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16939456462023-09-051.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/outros",
+  "label": "Móveis Internos · Outros",
+  "count": 27,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15865416782020-04-101.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/mesas_auxiliares",
+  "label": "Móveis Internos · Mesas Auxiliares",
+  "count": 283,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15634588162019-07-181.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/banquetas",
+  "label": "Móveis Internos · Banquetas",
+  "count": 164,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16679179012022-11-081.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/mesas_de_cabeceira",
+  "label": "Móveis Internos · Mesas de Cabeceira",
+  "count": 42,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16680900812022-11-101.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/buffets",
+  "label": "Móveis Internos · Buffets",
+  "count": 75,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16710476412022-12-141.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/armarios_e_comodas",
+  "label": "Móveis Internos · Armários e Cômodas",
+  "count": 73,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/17007485592023-11-231.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/bancos",
+  "label": "Móveis Internos · Bancos",
+  "count": 48,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16986895662023-10-301.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/puff",
+  "label": "Móveis Internos · Puffs",
+  "count": 76,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16541909052022-06-021.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/mesas_de_jantar",
+  "label": "Móveis Internos · Mesas de Jantar",
+  "count": 297,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16539339302022-05-301.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/espreguicadeiras_e_chaises",
+  "label": "Móveis Internos · Espreguiçadeiras",
+  "count": 28,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16547848182022-06-091.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/cristaleiras",
+  "label": "Móveis Internos · Cristaleiras",
+  "count": 38,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/17007481262023-11-231.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/escrivaninha",
+  "label": "Móveis Internos · Escrivaninhas",
+  "count": 22,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16571390912022-07-061.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/mesas_de_centro",
+  "label": "Móveis Internos · Mesas de Centro",
+  "count": 245,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15621818442019-07-031.png"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/sofas",
+  "label": "Móveis Internos · Sofás",
+  "count": 87,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16872897032023-06-201.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "moveis_internos/poltronas",
+  "label": "Móveis Internos · Poltronas",
+  "count": 318,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16571377072022-07-061.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "projetos_realizados",
+  "label": "Projetos Realizados",
+  "count": 10,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/17307514602024-11-041.jpg"
+ },
+ {
+  "vertical": "decoracao",
+  "slug": "vasos",
+  "label": "Vasos",
+  "count": 144,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16545312002022-06-061.jpg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "abajur",
+  "label": "Abajur",
+  "count": 211,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15549237602019-04-101.jpg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "acessorios",
+  "label": "Acessórios",
+  "count": 27,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15586429992019-05-231.jpg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "arandelas",
+  "label": "Arandelas",
+  "count": 291,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/17417181272025-03-111.png"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "balizadores",
+  "label": "Balizadores",
+  "count": 30,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16184957142021-04-151.png"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "lampiao",
+  "label": "Lampião",
+  "count": 65,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16975713922023-10-171.jpg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "luminarias",
+  "label": "Luminárias",
+  "count": 132,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16206761872021-05-101.png"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "lustres",
+  "label": "Lustres",
+  "count": 256,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16203898922021-05-071.png"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "pendente",
+  "label": "Pendentes",
+  "count": 599,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16608281762022-08-181.png"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "plafons",
+  "label": "Plafons",
+  "count": 110,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15583790282019-05-201.jpg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "postes",
+  "label": "Postes",
+  "count": 75,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16243799192021-06-221.png"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "projetos_realizados",
+  "label": "Projetos Realizados",
+  "count": 12,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16530698532022-05-201.jpeg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "spots",
+  "label": "Spots",
+  "count": 31,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15549870492019-04-111.jpg"
+ },
+ {
+  "vertical": "iluminacao",
+  "slug": "ventiladores",
+  "label": "Ventiladores",
+  "count": 10,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15696077632019-09-271.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "aliancas",
+  "label": "Alianças",
+  "count": 291,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15567243192019-05-011.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "aneis",
+  "label": "Anéis",
+  "count": 194,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16522973532022-05-111.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "braceletes",
+  "label": "Braceletes",
+  "count": 50,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16518583122022-05-061.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "brincos",
+  "label": "Brincos",
+  "count": 245,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16518431282022-05-061.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "colares",
+  "label": "Colares",
+  "count": 25,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16759443622023-02-091.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "correntes",
+  "label": "Correntes",
+  "count": 7,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16681077872022-11-101.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "gargantilhas",
+  "label": "Gargantilhas",
+  "count": 187,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16759448862023-02-091.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "pingentes",
+  "label": "Pingentes",
+  "count": 36,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/15544920382019-04-051.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "projetos_realizados",
+  "label": "Projetos Realizados",
+  "count": 14,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16530781942022-05-201.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "pulseiras",
+  "label": "Pulseiras",
+  "count": 102,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16675824822022-11-041.jpg"
+ },
+ {
+  "vertical": "joias",
+  "slug": "tornozeleiras",
+  "label": "Tornozeleiras",
+  "count": 2,
+  "cover": "https://www.raasch.com.br/admin/conteudos/produtos/16681081002022-11-101.jpg"
+ }
+]

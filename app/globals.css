@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette pulled from the Raasch logotype's gold gradient */
+  --color-ivory: #f8f4ee;
+  --color-cream: #efe6d8;
+  --color-sand: #e0d0b8;
+  --color-clay: #c9b294;
+  --color-gold: #b6873c;
+  --color-gold-deep: #9c6f2c;
+  --color-gold-soft: #d9b673;
+  --color-gold-pale: #f0dcb4;
+  --color-garnet: #7c2434;
+  --color-ink: #201c18;
+  --color-ink-soft: #4a4038;
+  --color-muted: #7d7062;
+
+  --font-display: var(--font-display), "Cormorant Garamond", serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ivory);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  /* Slim, warm scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-clay);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+  }
+}
+
+@layer components {
+  /* Letter-spaced micro label used above every section heading */
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .rule {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-clay),
+      transparent
+    );
+  }
+
+  /* Gold foil effect for display numerals and accents */
+  .foil {
+    background: linear-gradient(
+      100deg,
+      #9c6f2c 0%,
+      #d9b673 28%,
+      #f6e6c0 46%,
+      #d9b673 64%,
+      #a97a33 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Underline that draws in from the left on hover */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s var(--ease-luxe);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Ivory button that fills with gold from the bottom edge */
+  .btn-fill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    transition: color 0.5s var(--ease-luxe);
+  }
+  .btn-fill > span:first-child {
+    position: absolute;
+    inset: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s var(--ease-luxe);
+  }
+  .btn-fill:hover > span:first-child {
+    transform: scaleY(1);
+  }
+  .btn-fill > span:last-child {
+    position: relative;
+  }
+}
+
+@layer utilities {
+  /* Fine film grain, keeps large flat areas from banding */
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  .animate-marquee {
+    animation: marquee 44s linear infinite;
+  }
+
+  .animate-kenburns {
+    animation: kenburns 26s ease-in-out infinite alternate;
+  }
+
+  .animate-drift {
+    animation: drift 7s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background-size: 200% 100%;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll-triggered entrance, driven by Reveal.tsx */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1s var(--ease-luxe),
+    transform 1s var(--ease-luxe);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-marquee,
+  .animate-kenburns,
+  .animate-drift,
+  .animate-shimmer {
+    animation: none;
+  }
+  [style*="fadeUp"] {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

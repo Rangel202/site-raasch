@@ -1,0 +1,111 @@
+# Raasch — site institucional e catálogo
+
+Novo site da **Raasch** (Porto Alegre / RS), reunindo as três linhas da casa —
+**jóias, iluminação e decoração** — em um catálogo navegável com fechamento de
+venda pelo WhatsApp, como a loja já faz hoje.
+
+Todo o conteúdo (institucional, categorias, produtos, referências, fotos e
+contatos) foi migrado do site legado `raasch.com.br`.
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- React 19 + TypeScript
+- Tailwind CSS v4 (tokens de tema em `app/globals.css`)
+- Fontes: Cormorant Garamond (display) + Jost (texto), via `next/font`
+
+## Rodando localmente
+
+```bash
+npm install
+npm run dev
+```
+
+O site fica em [http://localhost:3000](http://localhost:3000).
+
+```bash
+npm run build   # build de produção
+npm run lint    # eslint
+```
+
+## Estrutura
+
+```
+app/
+  layout.tsx              fontes, metadados, header/footer, cesto
+  page.tsx                home
+  globals.css             paleta, tipografia, animações
+  empresa/                história da empresa desde 1989
+  contato/                dados da loja, formulário e mapa
+  revista-digital/        edições em PDF
+  busca/                  busca sobre todo o catálogo
+  joias/                  índice da linha
+    [...slug]/            listagem por categoria (aceita subcategorias)
+  iluminacao/             idem
+  decoracao/              idem
+  produto/[id]/           ficha do produto
+  data/
+    catalog.ts            tipos e consultas sobre o catálogo
+    site.ts               endereço, telefones, marcos institucionais
+    products.json         7.380 produtos migrados
+    categories.json       60 categorias
+  components/             header, cesto, grades, cards, seções da home
+public/
+  logo-full.png           logotipo completo (marca + wordmark)
+  logo-wordmark.png       só o lettering — usado no header
+  logo-mark.png           só o monograma
+  video/hero.mp4          vídeo animado da hero
+  images/
+    card-*.jpg            capas das três linhas (peça do catálogo sobre fundo escuro)
+    editorial-*.jpg       fotografia editorial usada nas seções e mastheads
+```
+
+## Catálogo
+
+`app/data/products.json` guarda nome, referência, descrição técnica e fotos de
+cada peça — o catálogo inteiro do site legado (jóias 1.153, iluminação 1.849,
+decoração 4.378). As **fotos são servidas pelo host legado**
+(`www.raasch.com.br/admin/conteudos/produtos/…`), liberado em
+`next.config.ts` → `images.remotePatterns`, e otimizado pelo `next/image`.
+
+> Para desligar essa dependência, basta baixar as imagens para `public/` e
+> trocar as URLs no JSON — nada mais no código muda.
+
+## Venda pelo WhatsApp
+
+A loja fecha as vendas no WhatsApp, e o site respeita isso:
+
+- **Comprar pelo WhatsApp** na ficha do produto, já com nome e referência.
+- **Cesto** (`app/components/cartStore.ts`), guardado em `localStorage`, que
+  monta uma mensagem única de orçamento com todos os itens.
+- Formulário de contato e botão flutuante apontam para o mesmo número.
+
+## Instagram e mapa
+
+- Seção dedicada ao **@raasch_joias** (`app/components/Instagram.tsx`): perfil em
+  destaque, CTA de seguir, e uma galeria de peças reais do catálogo. O Instagram
+  não expõe o feed sem token de API, então a galeria é rotulada como catálogo —
+  não se passa por posts do perfil.
+- `@raasch.decor` aparece logo abaixo, como perfil secundário.
+- Ícone do Instagram no header e no menu mobile.
+- **Mapa da loja** (`app/components/StoreMap.tsx`), na home e em `/contato`,
+  com o endereço sobreposto no desktop. Usa o embed sem chave do Google Maps.
+
+## Mobile
+
+- Os cards das três linhas viram quadrados abaixo de `lg`, para caberem na tela
+  sem rolagem interminável.
+- O botão "adicionar ao cesto" da grade só aparece no hover — como toque não
+  dispara hover, abaixo de `lg` ele é substituído por um botão **+ Cesto**
+  sob o nome da peça.
+- Os cards da grade têm altura igual, para os botões não desalinharem quando um
+  nome quebra em duas linhas.
+
+## Pendências
+
+- O formulário de contato abre o WhatsApp; não há envio por e-mail (o site
+  legado usava um mailer que não veio junto).
+- Preços não são exibidos — o catálogo legado também não os publica, os valores
+  variam com ouro, pedras e acabamento e são passados no atendimento.
+- A busca cobre nome, categoria, referência e descrição, com tratamento de
+  plural em português (`cristais` encontra `cristal`).
