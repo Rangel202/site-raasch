@@ -80,6 +80,14 @@ A loja fecha as vendas no WhatsApp, e o site respeita isso:
   monta uma mensagem única de orçamento com todos os itens.
 - Formulário de contato e botão flutuante apontam para o mesmo número.
 
+## Navegação no celular
+
+Uma **barra inferior fixa** (`MobileNav.tsx`) com Início, Jóias, Buscar, Cesto
+e Falar. É o alcance do polegar: quem está no meio do catálogo não precisa
+voltar ao topo para buscar ou abrir o cesto. Ela se retira quando a barra de
+compra do produto aparece, e o botão flutuante do WhatsApp passa a ser só de
+desktop, já que "Falar" cobre o mesmo no celular.
+
 ## Foco em jóias
 
 A home é ordenada como uma joalheria, não como um catálogo de três linhas
@@ -94,6 +102,10 @@ iguais. Jóias é a linha principal e a que o visitante chega pronto para compra
 4. **Iluminação e decoração** (`OtherLines.tsx`) — as outras linhas, presentes
    e deliberadamente mais discretas.
 5. Empresa, Instagram, Revista, Contato e mapa.
+
+A ficha do produto abre com uma **galeria deslizável em tela cheia** no celular
+(`ProductGallery.tsx`), com contador e indicadores — a peça sem moldura entre
+ela e quem olha. No desktop, trilho de miniaturas ao lado da foto grande.
 
 Na ficha do produto, uma **barra fixa de compra** (`StickyBuyBar.tsx`) aparece
 no celular quando os botões principais saem da tela. O botão flutuante do

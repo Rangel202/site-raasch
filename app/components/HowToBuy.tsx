@@ -19,34 +19,34 @@ const STEPS = [
   {
     n: "03",
     title: "Receba o orçamento",
-    text: "Respondemos com preço, prazo e formas de pagamento. Entrega para todo o Brasil ou retirada na loja.",
+    text: "Preço, prazo e formas de pagamento. Entrega para todo o Brasil ou retirada na loja.",
   },
 ];
 
 export default function HowToBuy() {
   return (
-    <section className="border-y border-sand bg-cream/50 py-16 sm:py-20 lg:py-24">
+    <section className="bg-ink py-16 text-ivory sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1500px] px-5 lg:px-10">
-        <Reveal className="max-w-xl">
-          <p className="eyebrow text-gold">Como comprar</p>
-          <h2 className="mt-4 font-display display-2 font-light">
-            Simples como mandar
-            <em className="italic text-gold"> uma mensagem</em>
-          </h2>
+        <Reveal className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+          <h2 className="font-display display-2 font-light">Como comprar</h2>
+          <p className="text-[12px] tracking-[0.2em] text-gold-pale uppercase">
+            Três passos, sem cadastro
+          </p>
         </Reveal>
 
-        <ol className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-3 lg:gap-7">
+        {/* Hairline rules instead of boxes — the numerals carry the structure. */}
+        <ol className="mt-10 sm:mt-12 lg:grid lg:grid-cols-3 lg:gap-12">
           {STEPS.map((step, i) => (
             <Reveal key={step.n} delay={i * 110} as="li">
-              <div className="flex h-full gap-5 border border-sand bg-ivory/70 p-6 lg:flex-col lg:gap-6 lg:p-8">
-                <p className="foil font-display text-[32px] leading-none font-normal lg:text-[40px]">
+              <div className="flex gap-6 border-t border-ivory/15 py-7 lg:flex-col lg:gap-5 lg:py-0 lg:pt-8">
+                <p className="foil shrink-0 font-display text-[34px] leading-none font-normal lg:text-[44px]">
                   {step.n}
                 </p>
                 <div>
-                  <h3 className="font-display text-[21px] leading-tight font-normal lg:text-[24px]">
+                  <h3 className="font-display text-[21px] leading-tight font-normal lg:text-[25px]">
                     {step.title}
                   </h3>
-                  <p className="mt-2.5 text-[14px] leading-relaxed font-light text-ink-soft">
+                  <p className="mt-2.5 max-w-sm text-[14px] leading-relaxed font-light text-ivory/65">
                     {step.text}
                   </p>
                 </div>
@@ -55,19 +55,22 @@ export default function HowToBuy() {
           ))}
         </ol>
 
-        <Reveal delay={200} className="mt-10 flex flex-col items-center gap-4">
+        <Reveal
+          delay={200}
+          className="mt-12 flex flex-col items-center gap-4 border-t border-ivory/15 pt-10 sm:flex-row sm:justify-between"
+        >
+          <p className="order-2 text-center text-[12px] text-ivory/50 sm:order-1 sm:text-left">
+            {SITE.whatsapp.label} · {SITE.hours}
+          </p>
           <a
             href={GENERAL_WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full items-center justify-center gap-3 bg-[#25D366] px-10 py-4 text-[12px] tracking-[0.2em] text-white uppercase transition-opacity duration-500 hover:opacity-90 sm:w-auto"
+            className="order-1 flex w-full items-center justify-center gap-3 bg-[#25D366] px-10 py-4 text-[12px] tracking-[0.2em] text-white uppercase transition-opacity duration-500 hover:opacity-90 sm:order-2 sm:w-auto"
           >
             <WhatsAppGlyph />
             Falar com a Raasch
           </a>
-          <p className="text-center text-[12px] text-muted">
-            {SITE.whatsapp.label} · {SITE.hours}
-          </p>
         </Reveal>
       </div>
     </section>

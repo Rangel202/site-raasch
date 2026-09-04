@@ -25,10 +25,9 @@ export default function Hero() {
     };
 
     const onPlaying = () => setPlaying(true);
-    const onStalled = () => setPlaying(false);
-
+    const onPause = () => setPlaying(false);
     video.addEventListener("playing", onPlaying);
-    video.addEventListener("pause", onStalled);
+    video.addEventListener("pause", onPause);
 
     tryPlay();
 
@@ -43,7 +42,7 @@ export default function Hero() {
 
     return () => {
       video.removeEventListener("playing", onPlaying);
-      video.removeEventListener("pause", onStalled);
+      video.removeEventListener("pause", onPause);
       document.removeEventListener("visibilitychange", retry);
       window.removeEventListener("touchstart", retry);
       window.removeEventListener("scroll", retry);
@@ -53,11 +52,10 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="grain relative flex h-[100svh] min-h-[560px] items-end overflow-hidden bg-ink"
+      className="grain relative flex h-[100svh] min-h-[540px] flex-col justify-end overflow-hidden bg-ink"
     >
-      {/* Poster underlay. It carries the Ken Burns drift while the video is
-          not running, so a blocked autoplay still gives a moving hero rather
-          than a dead frame. */}
+      {/* Poster underlay carries the drift while the video is not running, so a
+          blocked autoplay still gives a moving hero rather than a dead frame. */}
       <div
         aria-hidden
         className={`absolute inset-0 bg-cover bg-[62%_center] bg-no-repeat ${
@@ -82,66 +80,54 @@ export default function Hero() {
         disablePictureInPicture
       />
 
-      {/* Scrims — darkest at the bottom, where the copy sits. Mobile needs a
-          heavier foot because the text block is taller relative to the frame. */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-ink/10 sm:from-ink/90 sm:via-ink/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-ink/25 sm:via-transparent sm:to-ink/35" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-14 sm:pb-20 lg:px-10 lg:pb-24">
-        <div className="max-w-3xl">
-          <p
-            className="eyebrow text-gold-pale opacity-0"
-            style={{ animation: "fadeUp 1s var(--ease-luxe) 0.3s forwards" }}
-          >
-            Porto Alegre · desde 1989
-          </p>
+      <div className="relative z-10 w-full px-5 pb-24 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20">
+        <div className="mx-auto flex w-full max-w-[1500px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p
+              className="text-[10px] tracking-[0.42em] text-gold-pale uppercase opacity-0 sm:text-[11px]"
+              style={{ animation: "fadeUp 1s var(--ease-luxe) 0.25s forwards" }}
+            >
+              Joalheria · Porto Alegre · 1989
+            </p>
 
-          <h1
-            className="mt-5 font-display text-[clamp(2.6rem,11vw,6.4rem)] leading-[0.98] font-light text-ivory opacity-0 sm:mt-6"
-            style={{ animation: "fadeUp 1.1s var(--ease-luxe) 0.45s forwards" }}
-          >
-            Uma loja repleta
-            <br />
-            de <em className="font-normal italic text-gold-pale">desejos</em>
-          </h1>
-
-          <p
-            className="mt-5 max-w-lg text-[14px] leading-relaxed font-light text-ivory/80 sm:mt-7 sm:text-[15px]"
-            style={{ animation: "fadeUp 1.1s var(--ease-luxe) 0.65s forwards", opacity: 0 }}
-          >
-            Alianças, anéis, brincos e colares em ouro, diamantes e pedras
-            naturais — escolhidos peça a peça desde 1989. Orçamento na hora,
-            pelo WhatsApp.
-          </p>
+            <h1
+              className="mt-6 font-display text-[clamp(3rem,13vw,7rem)] leading-[0.92] font-light text-ivory opacity-0"
+              style={{ animation: "fadeUp 1.1s var(--ease-luxe) 0.4s forwards" }}
+            >
+              O ouro
+              <br />
+              tem memória
+            </h1>
+          </div>
 
           <div
-            className="mt-8 flex flex-col gap-3 opacity-0 sm:mt-10 sm:flex-row sm:items-center sm:gap-4"
-            style={{ animation: "fadeUp 1.1s var(--ease-luxe) 0.85s forwards" }}
+            className="flex shrink-0 flex-col gap-4 opacity-0 lg:items-end"
+            style={{ animation: "fadeUp 1.1s var(--ease-luxe) 0.7s forwards" }}
           >
+            <p className="max-w-xs text-[14px] leading-relaxed font-light text-ivory/75">
+              Alianças, anéis e brincos escolhidos peça a peça há trinta e seis
+              anos.
+            </p>
             <Link
               href="/joias"
-              className="btn-fill w-full bg-ivory px-9 py-4 text-ink hover:text-ivory sm:w-auto"
+              className="btn-fill w-full bg-ivory px-10 py-4 text-ink hover:text-ivory lg:w-auto"
             >
               <span className="bg-gold" />
-              <span>Ver as jóias</span>
-            </Link>
-            <Link
-              href="#joias"
-              className="inline-flex items-center justify-center gap-3 border border-ivory/30 px-9 py-4 text-[12px] tracking-[0.22em] text-ivory uppercase transition-colors duration-500 hover:border-gold-pale hover:text-gold-pale sm:border-0 sm:px-2"
-            >
-              Ver a coleção
-              <span aria-hidden>→</span>
+              <span>Ver a coleção</span>
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 lg:flex">
-        <span className="text-[10px] tracking-[0.3em] text-ivory/50 uppercase">
-          Role
-        </span>
-        <span className="animate-drift block h-12 w-px bg-gradient-to-b from-ivory/60 to-transparent" />
+      {/* Desktop-only scroll cue: on phones the bottom bar owns that strip. */}
+      <div
+        aria-hidden
+        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 opacity-0 lg:block"
+        style={{ animation: "fadeUp 1s var(--ease-luxe) 1.1s forwards" }}
+      >
+        <span className="animate-drift block h-8 w-px bg-gradient-to-b from-transparent via-ivory/50 to-transparent lg:h-12" />
       </div>
     </section>
   );

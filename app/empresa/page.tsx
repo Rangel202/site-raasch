@@ -48,9 +48,7 @@ export default function Page() {
           <Reveal delay={140}>
             <p className="eyebrow text-gold">Quem somos</p>
             <h2 className="mt-5 font-display display-2 font-light">
-              A sede está à altura
-              <br />
-              <em className="italic text-gold">dos nossos produtos</em>
+              A sede está à altura dos nossos produtos
             </h2>
 
             <div className="mt-8 flex flex-col gap-5 leading-relaxed font-light text-ink-soft">

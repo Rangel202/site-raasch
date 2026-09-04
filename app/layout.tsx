@@ -6,6 +6,7 @@ import CartDrawer from "./components/CartDrawer";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppFab from "./components/WhatsAppFab";
+import MobileNav from "./components/MobileNav";
 
 const display = Cormorant_Garamond({
   variable: "--font-display",
@@ -61,9 +62,10 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <CartProvider>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pb-[72px] lg:pb-0">{children}</main>
           <Footer />
           <CartDrawer />
+          <MobileNav />
           <WhatsAppFab />
         </CartProvider>
       </body>

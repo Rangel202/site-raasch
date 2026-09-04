@@ -17,8 +17,7 @@ export default function Page() {
         eyebrow="Fale conosco"
         title={
           <>
-            Venha até a loja ou
-            <em className="italic text-gold"> chame no WhatsApp</em>
+            Onde nos encontrar
           </>
         }
         intro="Atendimento personalizado do primeiro contato ao pós-venda. Estamos na Cidade Baixa, em Porto Alegre, com estacionamento e segurança."

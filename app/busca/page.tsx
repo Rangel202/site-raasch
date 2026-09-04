@@ -45,8 +45,7 @@ export default async function Page({
             </>
           ) : (
             <>
-              O que você
-              <em className="italic text-gold"> procura?</em>
+              O que você procura?
             </>
           )
         }

@@ -16,8 +16,7 @@ export default function OtherLines() {
         <Reveal className="max-w-xl">
           <p className="eyebrow text-gold">A casa também faz</p>
           <h2 className="mt-4 font-display display-2 font-light">
-            Iluminação e decoração,
-            <em className="italic text-gold"> sob o mesmo teto</em>
+            Iluminação e decoração
           </h2>
           <p className="mt-5 leading-relaxed font-light text-ink-soft">
             Desde 2006 somamos lustres, cristais finos e mobiliário ao catálogo,

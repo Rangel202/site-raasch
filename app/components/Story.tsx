@@ -28,8 +28,6 @@ export default function Story() {
           <p className="eyebrow text-gold">A empresa</p>
           <h2 className="mt-5 font-display display-1 font-light">
             Trinta e seis anos
-            <br />
-            <em className="italic text-gold">de confiança</em>
           </h2>
 
           <p className="mt-8 max-w-lg leading-relaxed font-light text-ink-soft">

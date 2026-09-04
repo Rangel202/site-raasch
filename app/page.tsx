@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import JoiasSpotlight from "./components/JoiasSpotlight";
+import FeaturedPiece from "./components/FeaturedPiece";
 import HowToBuy from "./components/HowToBuy";
 import OtherLines from "./components/OtherLines";
 import Story from "./components/Story";
@@ -10,8 +11,9 @@ import Contact from "./components/Contact";
 import StoreMap from "./components/StoreMap";
 
 /**
- * Jewellery leads: it is the flagship line and the one a visitor arrives ready
- * to buy. Lighting and decoration follow once that story is told.
+ * Jewellery leads and the page alternates ground: ivory catalogue, dark
+ * editorial, ivory again. That cadence is what keeps ten sections from
+ * reading as one long template.
  */
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <JoiasSpotlight />
+      <FeaturedPiece />
       <HowToBuy />
       <OtherLines />
       <Story />

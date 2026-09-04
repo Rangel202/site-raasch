@@ -37,8 +37,7 @@ export default function Contact() {
         <Reveal>
           <p className="eyebrow text-gold">Fale conosco</p>
           <h2 className="mt-5 font-display display-1 font-light">
-            Estamos à sua
-            <em className="italic text-gold"> disposição</em>
+            Venha até a loja
           </h2>
           <p className="mt-7 max-w-md leading-relaxed font-light text-ink-soft">
             Uma equipe cordial, excelente localização, segurança e

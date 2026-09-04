@@ -27,12 +27,13 @@ type Props = {
 export default function ProductCard({ product, eager = false }: Props) {
   const { add } = useCart();
   const [hovered, setHovered] = useState(false);
+  const [added, setAdded] = useState(false);
   const href = `/produto/${product.id}`;
 
   const cover = product.images[0];
   const alternate = product.images[1];
 
-  const addToCart = () =>
+  const addToCart = () => {
     add({
       id: product.id,
       name: product.name,
@@ -40,6 +41,9 @@ export default function ProductCard({ product, eager = false }: Props) {
       image: cover,
       href,
     });
+    setAdded(true);
+    window.setTimeout(() => setAdded(false), 1400);
+  };
 
   return (
     <article
@@ -47,7 +51,7 @@ export default function ProductCard({ product, eager = false }: Props) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative aspect-square overflow-hidden bg-cream">
+      <div className="relative aspect-4/5 overflow-hidden bg-cream">
         <Link href={href} className="absolute inset-0" aria-label={product.name}>
           <Image
             src={cover}
@@ -55,7 +59,7 @@ export default function ProductCard({ product, eager = false }: Props) {
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={eager}
-            className={`object-cover transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05] ${
+            className={`object-cover transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04] ${
               alternate && hovered ? "opacity-0" : "opacity-100"
             }`}
           />
@@ -66,25 +70,27 @@ export default function ProductCard({ product, eager = false }: Props) {
               alt=""
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className={`object-cover transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05] ${
+              className={`object-cover transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04] ${
                 hovered ? "opacity-100" : "opacity-0"
               }`}
             />
           )}
         </Link>
 
-        {/* Quick-add bar rises from the bottom edge on hover. Hidden below lg
-            because a touch device never fires hover — those get the button
-            under the name instead. */}
-        <div className="absolute inset-x-0 bottom-0 hidden translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 lg:block">
-          <button
-            type="button"
-            onClick={addToCart}
-            className="w-full bg-ink/92 py-3.5 text-[11px] tracking-[0.24em] text-ivory uppercase backdrop-blur-sm transition-colors duration-400 hover:bg-gold"
-          >
-            Adicionar ao cesto
-          </button>
-        </div>
+        {/* A quiet disc instead of a full-width bar: less chrome over the piece,
+            and it stays visible on touch, where hover never fires. */}
+        <button
+          type="button"
+          onClick={addToCart}
+          aria-label={`Adicionar ${product.name} ao cesto`}
+          className={`absolute right-2.5 bottom-2.5 flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:right-3 lg:bottom-3 lg:h-11 lg:w-11 lg:translate-y-2 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${
+            added
+              ? "bg-gold text-ivory"
+              : "bg-ivory/90 text-ink hover:bg-gold hover:text-ivory"
+          }`}
+        >
+          {added ? <CheckIcon /> : <PlusIcon />}
+        </button>
       </div>
 
       <div className="mt-3.5 flex flex-1 flex-col lg:mt-4">
@@ -93,22 +99,38 @@ export default function ProductCard({ product, eager = false }: Props) {
             {product.name}
           </h3>
         </Link>
-        <p className="mt-1.5 truncate text-[10px] tracking-[0.16em] text-muted uppercase sm:text-[11px]">
+        <p className="mt-1 truncate text-[10px] tracking-[0.16em] text-muted uppercase sm:text-[11px]">
           {product.ref ? `Ref. ${product.ref}` : product.categoryLabel}
         </p>
-
-        {/* Touch-friendly equivalent of the hover bar */}
-        <button
-          type="button"
-          onClick={addToCart}
-          className="mt-auto flex w-full items-center justify-center gap-2 border border-sand py-3 text-[10px] tracking-[0.2em] text-ink-soft uppercase transition-colors active:border-gold active:text-gold lg:hidden"
-        >
-          <span aria-hidden className="text-[13px] leading-none">
-            +
-          </span>
-          Cesto
-        </button>
       </div>
     </article>
+  );
+}
+
+function PlusIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden>
+      <path
+        d="M12 5v14M5 12h14"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden>
+      <path
+        d="m5 12.5 4.5 4.5L19 7"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
   );
 }
